@@ -7,4 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-button expand="full"
+                  fill="outline"
+                  size="large"
+                  shape="round"
+                  (click)="scan()">
+                  Scanear
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
