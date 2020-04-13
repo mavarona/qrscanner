@@ -40,4 +40,16 @@ export class DataLocalService {
     }
   }
 
+  sendEmail(){
+    const arrData = [];
+    const titles = 'Typo, Formato, Creado en, Texto\n';
+    arrData.push ( titles );
+
+    this.registers.forEach( register => {
+      const line = `${ register.type }, ${ register.format }, ${ register.created }, ${ register.text.replace(',', ' ') }\n`;
+      arrData.push ( line );
+    });
+
+  }
+
 }
